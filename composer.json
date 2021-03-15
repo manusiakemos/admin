@@ -1,0 +1,32 @@
+{
+    "name": "manusiakemos/admin",
+    "description": "admin template",
+    "type": "package",
+    "require-dev": {
+        "barryvdh/laravel-ide-helper": "^2.9"
+    },
+    "autoload": {
+        "psr-4": {
+            "Manusiakemos\\Admin\\": "./src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Manusiakemos\\Admin\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Manusiakemos\\Admin\\AdminServiceProvider"
+            ]
+        }
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "manusiakemos",
+            "email": "manusiakemos@gmail.com"
+        }
+    ]
+}

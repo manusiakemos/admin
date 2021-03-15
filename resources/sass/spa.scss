@@ -1,0 +1,48 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Jura:wght@700&family=Poppins&display=swap');
+// Variables
+
+
+@import 'variables';
+@import '~vuesax/dist/vuesax.css';
+@import "~bootstrap";
+@import '~bootstrap-vue/src/index.scss';
+@import '~material-icons/iconfont/material-icons.css';
+
+@import 'typo';
+@import 'layout';
+@import 'component';
+
+.center-page {
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    min-width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.vs-sidebar--header {
+    border-bottom: none !important;
+    padding: 0 !important;
+}
+
+
+.vs-sidebar--item{
+    a:hover {
+        color: #0f53f8;
+        text-decoration: none !important;
+    }
+}
+
+.vs-sidebar.vs-sidebar-parent {
+    position: fixed;
+    height: 100vh !important;
+    left: 0;
+    top: 0;
+    z-index: 999;
+}
+
+#logo{
+    height: 60px;
+}
