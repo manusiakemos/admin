@@ -6,7 +6,8 @@
         "barryvdh/laravel-ide-helper": "^2.9"
     },
     "require": {
-        "illuminate/support": "^7.0|^8.0"
+        "illuminate/support": "^7.0|^8.0",
+        "manusiakemos/admin" : "^1"
     },
     "autoload": {
         "psr-4": {
