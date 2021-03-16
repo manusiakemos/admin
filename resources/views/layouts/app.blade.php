@@ -11,11 +11,11 @@
 
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{ asset('libs/alertifyjs/css/alertify.min.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('libs/alertifyjs/css/themes/default.min.css') }}"/>
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('vendor/crudgen/libs/alertifyjs/css/alertify.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('vendor/crudgen/alertifyjs/css/themes/default.min.css') }}"/>
+    <link href="{{ asset('vendor/crudgen/css/app.css') }}" rel="stylesheet">
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <script src="{{ asset('vendor/crudgen/js/app.js') }}"></script>
     @stack("style")
 </head>
 <body>
@@ -42,7 +42,7 @@
     </main>
 @endauth
 
-<script src="{{ asset('libs/alertifyjs/alertify.min.js') }}"></script>
+<script src="{{ asset('vendor/crudgen/libs/alertifyjs/alertify.min.js') }}"></script>
 
 @auth
     <script>

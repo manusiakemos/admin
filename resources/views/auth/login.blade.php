@@ -1,4 +1,4 @@
-@extends("layouts.app")
+@extends("vendor.admin.layouts.app")
 
 @section("content")
     <div class="container-login100 bg-app">
@@ -11,14 +11,10 @@
                     <div>
                         <input id="username" type="text"
                                placeholder="Username"
-                               class="form-control input100 @error('username') is-invalid @enderror" name="username"
+                               class="form-control input100" name="username"
                                value="{{ old('username') }}" required autocomplete="username" autofocus>
 
-                        @error('username')
-                        <span class="invalid-feedback" role="alert">
-                                        <strong class="text-white">{{ $message }}</strong>
-                                    </span>
-                        @enderror
+
                     </div>
                 </div>
 
@@ -26,14 +22,9 @@
                     <div>
                         <input id="password" type="password"
                                placeholder="Password"
-                               class="form-control input100 @error('password') is-invalid @enderror" name="password"
+                               class="form-control input100" name="password"
                                required autocomplete="current-password">
 
-                        @error('password')
-                        <span class="invalid-feedback" role="alert">
-                                        <strong class="text-white">{{ $message }}</strong>
-                                    </span>
-                        @enderror
                     </div>
                 </div>
 

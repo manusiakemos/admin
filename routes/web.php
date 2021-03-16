@@ -26,6 +26,6 @@ if(config('crud.mode') == 'mpa'){
 
 if(config('crud.use_login') == true){
     Route::get('/login', [App\Http\Controllers\Admin\AuthController::class,'showLoginForm'])->name('login');
-    Route::get('/post', [App\Http\Controllers\Admin\AuthController::class,'login']);
+    Route::post('/post', [App\Http\Controllers\Admin\AuthController::class,'login']);
     Route::post('/logout', [App\Http\Controllers\Admin\AuthController::class,'logout'])->name('logout');
 }
