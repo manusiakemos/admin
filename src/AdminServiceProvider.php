@@ -36,4 +36,11 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/views' => resource_path('views/vendor/admin'),
         ],'admin');
     }
+
+    protected function routeConfiguration()
+{
+    return [
+        'middleware' => 'auth',
+    ];
+}
 }
