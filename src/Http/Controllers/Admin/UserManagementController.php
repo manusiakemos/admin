@@ -13,7 +13,7 @@ class UserManagementController extends Controller
 
     public function __construct()
     {
-        $this->middleware(['auth', 'role:super-admin']);
+        $this->middleware(['auth']);
     }
 
     public function api(Request $request)
