@@ -12,8 +12,7 @@ class AuthController extends Controller
 
     public function __construct()
     {
-        $this->middleware(["auth"])->only(['logout']);
-        $this->middleware(["guest"])->only(['showLoginForm', "login"]);
+        $this->middleware(["guest"])->except(['logout']);
     }
 
     public function showLoginForm()
@@ -29,7 +28,7 @@ class AuthController extends Controller
         if (Auth::attempt($credentials, $remember)) {
             $request->session()->regenerate();
 
-            return redirect()->intended('dashboard');
+            return redirect()->intended('/home');
         }
 
         return back()->withErrors([
