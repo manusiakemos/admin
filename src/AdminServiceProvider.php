@@ -28,7 +28,7 @@ class AdminServiceProvider extends ServiceProvider
         $this->publishes([
             __DIR__ . '/../src/Http/Controllers/Admin' => app_path('/Http/Controllers/Admin'),
             __DIR__ . '/../src/Models' => app_path('/Models'),
-            __DIR__ . '/../src/Http/Middleware' => app_path('/Http/Middleware'),
+            __DIR__ . '/../Middleware' => app_path('/Http/Middleware'),
             __DIR__ . '/../database/migrations' => database_path('migrations'),
             __DIR__ . '/../resources/images' => resource_path('admin/images'),
             __DIR__ . '/../resources/js' => resource_path('admin/js'),
