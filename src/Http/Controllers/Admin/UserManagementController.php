@@ -59,7 +59,7 @@ class UserManagementController extends Controller
                 ->toJson();
         }
 
-        return view('usermanagement.index');
+        return view('vendor.admin.usermanagement.index');
     }
 
     /**
@@ -69,7 +69,7 @@ class UserManagementController extends Controller
      */
     public function create()
     {
-        return view('usermanagement.create', ['modal_title' => 'Tambah Slider']);
+        return view('vendor.admin.usermanagement.create', ['modal_title' => 'Tambah Slider']);
     }
 
     /**
@@ -114,7 +114,7 @@ class UserManagementController extends Controller
      */
     public function show(UserManagement $usermanagement)
     {
-        return view('usermanagement.show', ['data' => $usermanagement]);
+        return view('vendor.admin.usermanagement.show', ['data' => $usermanagement]);
     }
 
     /**
@@ -125,7 +125,7 @@ class UserManagementController extends Controller
      */
     public function edit(UserManagement $usermanagement)
     {
-        return view('usermanagement.edit', ['data' => $usermanagement], ['modal_title' => 'Edit Slider']);
+        return view('vendor.admin.usermanagement.edit', ['data' => $usermanagement], ['modal_title' => 'Edit Slider']);
     }
 
     /**
