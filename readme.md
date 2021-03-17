@@ -22,4 +22,5 @@
 
  9. composer dump-autoload
  10. run composer require yajra/laravel-datatables-oracle:"~9.0"
+ 11. copy folder public/vendor/admin/images & public/vendor/admin/fonts to public
 

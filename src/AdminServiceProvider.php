@@ -37,10 +37,5 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/views' => resource_path('views/vendor/admin'),
             __DIR__ . '/../routes' => base_path('routes'),
         ], 'admin');
-
-        $this->publishes([
-            __DIR__ . '/../src/View' => app_path('/View'),
-            __DIR__ . '/../resources/views/components' => resource_path('views/vendor/admin/components'),
-        ], 'component');
     }
 }
