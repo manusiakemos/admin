@@ -1,4 +1,4 @@
- 1. composer require manusiakemos/crud
+ 1. composer require manusiakemos/crudgen
  2. composer vendor:publish --tag=crudgen
  3. composer require manusiakemos/admin
  4. composer vendor:publish --tag=admin
