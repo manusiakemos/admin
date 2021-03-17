@@ -29,7 +29,6 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/../src/Http/Controllers/Admin' => app_path('/Http/Controllers/Admin'),
             __DIR__ . '/../src/Models' => app_path('/Models'),
             __DIR__ . '/../database/migrations' => database_path('migrations'),
-            __DIR__ . '/../src/View' => app_path('/View'),
             __DIR__ . '/../resources/images' => resource_path('admin/images'),
             __DIR__ . '/../resources/js' => resource_path('admin/js'),
             __DIR__ . '/../resources/lang' => resource_path('lang'),
@@ -37,5 +36,10 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/views' => resource_path('views/vendor/admin'),
             __DIR__ . '/../routes' => base_path('routes'),
         ], 'admin');
+
+        $this->publishes([
+            __DIR__ . '/../src/View' => app_path('/View'),
+            __DIR__ . '/../resources/views/components' => resource_path('views/vendor/admin/components'),
+        ], 'component');
     }
 }
