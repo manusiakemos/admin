@@ -5,7 +5,7 @@
  5. php artisan  vendor:publish --tag=component
  6. add role middleware to route group
  7. include admin.php in web.php
- 8. add helper in composer.jsonlint
+ 8. add helper in composer.json
  9. composer dump-autoload
  10. run composer require yajra/laravel-datatables-oracle:"~9.0"
 
