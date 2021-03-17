@@ -24,11 +24,11 @@
         <img src="{{asset('images/cross.svg')}}" alt="menu" height="20">
     </a>
     <div class="wrapper d-flex">
-       @if(config('app.mode') == 'mpa')
+       @if(config('crud.mode') == 'mpa')
             @include("parts.sidebar")
         @endif
         <div class="main-wrapper">
-            @if(config('app.mode') == 'mpa')
+            @if(config('crud.mode') == 'mpa')
                 @include("parts.authnav")
             @endif
             <main class="py-3">
