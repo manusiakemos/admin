@@ -4,6 +4,8 @@ namespace Manusiakemos\Admin;
 
 use Illuminate\Support\ServiceProvider;
 
+use Illuminate\Support\Facades\Route;
+
 class AdminServiceProvider extends ServiceProvider
 {
     /**
@@ -23,7 +25,6 @@ class AdminServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        $this->loadRoutesFrom(__DIR__ . '/../routes/web.php');
         $this->publishes([
             __DIR__ . '/../src/Http/Controllers/Admin' => app_path('/Http/Controllers/Admin'),
             __DIR__ . '/../src/Models' => app_path('/Models'),
@@ -34,13 +35,7 @@ class AdminServiceProvider extends ServiceProvider
             __DIR__ . '/../resources/lang' => resource_path('lang'),
             __DIR__ . '/../resources/sass' => resource_path('admin/sass'),
             __DIR__ . '/../resources/views' => resource_path('views/vendor/admin'),
-        ],'admin');
+            __DIR__ . '/../routes' => base_path('routes'),
+        ], 'admin');
     }
-
-    protected function routeConfiguration()
-{
-    return [
-        'middleware' => 'auth',
-    ];
-}
 }
