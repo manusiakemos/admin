@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('vendor.admin.layouts.app')
 
 @section('content')
     <div class="container">
@@ -57,9 +57,9 @@
 
 
 @push("script")
-    <script src="{{ asset('libs/select2/select2.min.js') }}"></script>
-    <script src="{{ asset('libs/etc/loadingoverlay.js') }}"></script>
-    <script src="{{ asset('libs/etc/jqueryform.js') }}"></script>
+    <script src="{{ asset('vendor/crudgen/libs/select2/select2.min.js') }}"></script>
+    <script src="{{ asset('vendor/crudgen/libs/etc/loadingoverlay.js') }}"></script>
+    <script src="{{ asset('vendor/crudgen/libs/etc/jqueryform.js') }}"></script>
     <script>
         $(".select2").select2();
         $(".custom-file-input").on("change", function () {
@@ -101,5 +101,5 @@
 
 @push("style")
     <link rel="stylesheet" type="text/css"
-          href="{{ asset('libs/select2/select2.min.css') }}"/>
+          href="{{ asset('vendor/crudgen/libs/select2/select2.min.css') }}"/>
 @endpush

@@ -7,8 +7,6 @@
             <li class="{{ (request()->is('home*')) ? 'active' : '' }}">
                 <a href="{{route('home')}}">Home</a>
             </li>
-            <li class="{{ (request()->is('slider*')) ? 'active' : '' }}">
-                <a href="{{route('slider.index')}}">Slider</a></li>
 
             @if(auth()->user()->role=='super-admin')
                 <li>

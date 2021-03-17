@@ -18,12 +18,12 @@ class ProfileController extends Controller
 
     public function showProfilePage()
     {
-        return view("profile.profile_page", ['data' => auth()->user()]);
+        return view("vendor.admin.profile.profile_page", ['data' => auth()->user()]);
     }
 
     public function showPasswordPage()
     {
-        return view("profile.password_page");
+        return view("vendor.admin.profile.password_page");
     }
 
     public function updateProfile(Request $request)

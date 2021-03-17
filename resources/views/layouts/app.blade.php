@@ -12,7 +12,7 @@
     <!-- Styles -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('vendor/crudgen/libs/alertifyjs/css/alertify.min.css') }}"/>
-    <link rel="stylesheet" href="{{ asset('vendor/crudgen/alertifyjs/css/themes/default.min.css') }}"/>
+    <link rel="stylesheet" href="{{ asset('vendor/crudgen/libs/alertifyjs/css/themes/default.min.css') }}"/>
     <link href="{{ asset('vendor/crudgen/css/app.css') }}" rel="stylesheet">
     <!-- Scripts -->
     <script src="{{ asset('vendor/crudgen/js/app.js') }}"></script>
@@ -21,15 +21,15 @@
 <body>
 @auth
     <a href="#" id="mobileMenuCloser" class="sidebarTogglerButton d-none" style="position: absolute; right:30px; top: 30px">
-        <img src="{{asset('images/cross.svg')}}" alt="menu" height="20">
+        <img src="{{asset('vendor/crudgen/images/cross.svg')}}" alt="menu" height="20">
     </a>
     <div class="wrapper d-flex">
        @if(config('crud.mode') == 'mpa')
-            @include("parts.sidebar")
+            @include("vendor.admin.parts.sidebar")
         @endif
         <div class="main-wrapper">
             @if(config('crud.mode') == 'mpa')
-                @include("parts.authnav")
+                @include("vendor.admin.parts.authnav")
             @endif
             <main class="py-3">
                 @yield('content')
