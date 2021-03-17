@@ -9,7 +9,7 @@
 
  `"autoload": {
     "files": [
-        "app/helpers.php"
+        "app/helper/helper.php"
     ],
     "classmap": [
         "database/seeds",
