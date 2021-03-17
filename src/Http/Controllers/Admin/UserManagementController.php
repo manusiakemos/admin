@@ -50,10 +50,10 @@ class UserManagementController extends Controller
         if ($request->ajax()) {
             return DataTables::of($data)
                 ->addColumn('action', function (UserManagement $data) {
-                    return view("usermanagement.actions_usermanagement", ['data' => $data]);
+                    return view("vendor.admin.usermanagement.actions_usermanagement", ['data' => $data]);
                 })
                 ->addColumn('checked', function (UserManagement $data) {
-                    return view("usermanagement.checked_usermanagement", ['data' => $data]);
+                    return view("vendor.admin.usermanagement.checked_usermanagement", ['data' => $data]);
                 })
                 ->rawColumns(['action', 'checked'])
                 ->toJson();
