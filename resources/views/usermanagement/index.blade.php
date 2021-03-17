@@ -53,20 +53,20 @@
 
 @push("style")
     <link rel="stylesheet" type="text/css"
-          href="{{ asset('libs/datatables/datatables.min.css') }}"/>
+          href="{{ asset('vendor/crudgen/libs/datatables/datatables.min.css') }}"/>
     <link rel="stylesheet" type="text/css"
-          href="{{ asset('libs/select2/select2.min.css') }}"/>
+          href="{{ asset('vendor/crudgen/libs/select2/select2.min.css') }}"/>
 @endpush
 
 
 @push("script")
-        <script src="{{ asset('libs/select2/select2.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('libs/datatables/pdfmake.min.js') }}"></script>
-        <script type="text/javascript" src="{{ asset('libs/datatables/vfs_fonts.js') }}"></script>
+        <script src="{{ asset('vendor/crudgen/libs/select2/select2.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('vendor/crudgen/libs/datatables/pdfmake.min.js') }}"></script>
+        <script type="text/javascript" src="{{ asset('vendor/crudgen/libs/datatables/vfs_fonts.js') }}"></script>
         <script type="text/javascript"
-                src="{{ asset("libs/datatables/datatables.min.js") }}"></script>
-        <script src="{{ asset('libs/etc/loadingoverlay.js') }}"></script>
-        <script src="{{ asset('libs/etc/jqueryform.js') }}"></script>
+                src="{{ asset("vendor/crudgen/libs/datatables/datatables.min.js") }}"></script>
+        <script src="{{ asset('vendor/crudgen/libs/etc/loadingoverlay.js') }}"></script>
+        <script src="{{ asset('vendor/crudgen/libs/etc/jqueryform.js') }}"></script>
     <script>
         var app = new Vue({
             el: "#app",

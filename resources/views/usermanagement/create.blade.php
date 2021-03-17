@@ -1,1 +1,1 @@
-@include("usermanagement.form", [ 'action' => route('usermanagement.store') ])
+@include("vendor.admin.usermanagement.form", [ 'action' => route('usermanagement.store') ])
