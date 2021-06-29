@@ -13,9 +13,13 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{{ asset('vendor/crudgen/libs/alertifyjs/css/alertify.min.css') }}"/>
     <link rel="stylesheet" href="{{ asset('vendor/crudgen/libs/alertifyjs/css/themes/default.min.css') }}"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/metismenu/dist/metisMenu.min.css">
     <link href="{{ asset('vendor/crudgen/css/app.css') }}" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.14/vue.min.js"></script>
+    <script src="https://unpkg.com/metismenu"></script>
     <!-- Scripts -->
-    <script src="{{ asset('vendor/crudgen/js/app.js') }}"></script>
     @stack("style")
 </head>
 <body>
@@ -56,18 +60,27 @@
     </form>
 @endauth
 
+@if(auth()->check())
+    <script>
+        window.axiosInstance = axios.create({
+            baseURL: '{{url('/')}}',
+            timeout: 1000,
+            headers: {'Authorization': 'Bearer {{ auth()->user()->api_token }}'}
+        });
+    </script>
+@endif
+
 @stack("script")
 
 @auth
     <script>
         var fullHeight = function () {
-
             $('.js-fullheight').css('height', $(window).height());
             $(window).resize(function () {
                 $('.js-fullheight').css('height', $(window).height());
             });
-
         };
+
         fullHeight();
 
         $('.sidebarTogglerButton').on('click', function () {

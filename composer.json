@@ -2,9 +2,6 @@
     "name": "manusiakemos/admin",
     "description": "admin template",
     "type": "package",
-    "require-dev": {
-        "barryvdh/laravel-ide-helper": "^2.9"
-    },
     "require": {
         "illuminate/support": "^7.0|^8.0"
     },
